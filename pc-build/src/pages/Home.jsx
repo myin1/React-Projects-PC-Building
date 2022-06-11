@@ -3,8 +3,12 @@ import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_W
 import { Typography, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/system";
 import SearchButton from "../components/SearchButton";
+import SplitScreen from "../components/content/SplitScreen";
+import SplitScrenRTL from "../components/content/SplitScreenRTL";
+
+import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
+import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 
 function Home() {
   return (
@@ -70,62 +74,26 @@ function Home() {
         </Grid>
       </div>
       <div>
-        <Container>
-          <Grid container mt={5}>
-            <Grid
-              item
-              xs={12}
-              lg={6}
-              sx={{
-                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png)`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                height: "550px",
-              }}
-            ></Grid>
-            <Grid item xs={12} lg={6}>
-              <h1>Quality Service</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+        <SplitScreen
+          image={Avalanche}
+          Title="Quality Service"
+          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 felis quam, fringilla a lorem ut, tincidunt commodo elit. Ut
                 convallis nibh tempus dignissim gravida. Nam interdum est vitae
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
-                pellentesque viverra maximus.
-              </p>
-              <Button variant="contained">Learn More</Button>
-            </Grid>
-          </Grid>
-        </Container>
+                pellentesque viverra maximus."
+        />
       </div>
       <div style={{ backgroundColor: "gray" }}>
-        <Container>
-          <Grid container mt={5}>
-            <Grid item xs={12} lg={6} sx={{ color: "white" }}>
-              <h1>High Performance</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+        <SplitScrenRTL
+          image={Avant}
+          Title="High Performance"
+          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 felis quam, fringilla a lorem ut, tincidunt commodo elit. Ut
                 convallis nibh tempus dignissim gravida. Nam interdum est vitae
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
-                pellentesque viverra maximus.
-              </p>
-              <Button variant="contained">Learn More</Button>
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              lg={6}
-              sx={{
-                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/2/20/Avant-Tower-Gaming-PC.png)`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                height: "550px",
-              }}
-            ></Grid>
-          </Grid>
-        </Container>
+                pellentesque viverra maximus."
+        />
       </div>
     </div>
   );

@@ -4,7 +4,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Box, IconButton } from "@mui/material";
 import ComputerIcon from "@mui/icons-material/Computer";
-import SearchButton from "./SearchButton";
 
 const pages = ["PC Builds", "Components", "PC Types"];
 
