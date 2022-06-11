@@ -11,6 +11,25 @@ import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const pages = ["PC Builds", "Components", "PC Types", "FAQ"];
+const components = [
+  "Motherboard",
+  "Power Supply",
+  "Storage",
+  "CPU",
+  "GPU",
+  "RAM",
+  "Cooling",
+  "Case",
+];
+const types = [
+  "Entertainment",
+  "Gaming",
+  "Streaming",
+  "Production",
+  "Editing",
+  "Theather",
+  "VR",
+];
 let menu = null;
 
 export default function Navbar() {
@@ -33,16 +52,19 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             disableRipple="True"
+            component={Link}
+            to="/"
           >
-            <Link to="/">
-              <ComputerIcon />
-            </Link>
+            <ComputerIcon />
           </IconButton>
+
           {pages.map((page) => (
             <Button
               key={page}
-              onMouseEnter={(event) => handleClick(event, page)}
+              onMouseOver={(event) => handleClick(event, page)}
               sx={{ color: "inherit" }}
+              component={Link}
+              to={page.replace(/\s+/g, "")}
             >
               {page}
             </Button>
@@ -57,14 +79,15 @@ export default function Navbar() {
               onMouseLeave: handleClose,
             }}
           >
-            <MenuItem onClick={handleClose}>Motherboard</MenuItem>
-            <MenuItem onClick={handleClose}>Power Supply</MenuItem>
-            <MenuItem onClick={handleClose}>Storage</MenuItem>
-            <MenuItem onClick={handleClose}>CPU</MenuItem>
-            <MenuItem onClick={handleClose}>GPU</MenuItem>
-            <MenuItem onClick={handleClose}>RAM</MenuItem>
-            <MenuItem onClick={handleClose}>Cooling</MenuItem>
-            <MenuItem onClick={handleClose}>Case</MenuItem>
+            {components.map((components) => (
+              <MenuItem
+                onClick={handleClose}
+                component={Link}
+                to={components.replace(/\s+/g, "")}
+              >
+                {components}
+              </MenuItem>
+            ))}
           </Menu>
           <Menu
             id="pcType-menu"
@@ -76,13 +99,11 @@ export default function Navbar() {
               onMouseLeave: handleClose,
             }}
           >
-            <MenuItem onClick={handleClose}>Entertainment</MenuItem>
-            <MenuItem onClick={handleClose}>Gaming</MenuItem>
-            <MenuItem onClick={handleClose}>Streaming</MenuItem>
-            <MenuItem onClick={handleClose}>Production</MenuItem>
-            <MenuItem onClick={handleClose}>Editing</MenuItem>
-            <MenuItem onClick={handleClose}>Theather</MenuItem>
-            <MenuItem onClick={handleClose}>VR</MenuItem>
+            {types.map((types) => (
+              <MenuItem onClick={handleClose} component={Link} to={types}>
+                {types}
+              </MenuItem>
+            ))}
           </Menu>
         </Box>
         <SearchButton />

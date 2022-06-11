@@ -1,12 +1,8 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
 import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_White_Wooden_Desk.jpg";
 import { Typography, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/system";
-import ComputerIcon from "@mui/icons-material/Computer";
-import SearchButton from "../components/SearchButton";
 import SplitScreen from "../components/content/SplitScreen";
 import SplitScrenRTL from "../components/content/SplitScreenRTL";
 
