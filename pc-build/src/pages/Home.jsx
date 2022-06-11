@@ -76,8 +76,8 @@ function Home() {
       <div>
         <SplitScreen
           image={Avalanche}
-          Title="Quality Service"
-          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          title="Quality Service"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 felis quam, fringilla a lorem ut, tincidunt commodo elit. Ut
                 convallis nibh tempus dignissim gravida. Nam interdum est vitae
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
@@ -87,8 +87,8 @@ function Home() {
       <div style={{ backgroundColor: "gray" }}>
         <SplitScrenRTL
           image={Avant}
-          Title="High Performance"
-          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          title="High Performance"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 felis quam, fringilla a lorem ut, tincidunt commodo elit. Ut
                 convallis nibh tempus dignissim gravida. Nam interdum est vitae
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent

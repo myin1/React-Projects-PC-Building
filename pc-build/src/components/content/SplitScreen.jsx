@@ -19,8 +19,8 @@ export default function SplitScreen(props) {
           }}
         ></Grid>
         <Grid item xs={12} lg={6}>
-          <h1>{props.Title}</h1>
-          <p>{props.Description}</p>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
           <Button variant="contained">Learn More</Button>
         </Grid>
       </Grid>
