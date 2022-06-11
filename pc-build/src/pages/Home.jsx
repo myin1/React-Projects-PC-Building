@@ -1,29 +1,16 @@
 import * as React from "react";
-import Navbar from "../components/Navbar";
-import SplitScreen from "../components/content/SplitScreen";
-import SplitScrenRTL from "../components/content/SplitScreenRTL";
 import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_White_Wooden_Desk.jpg";
 import { Typography, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/system";
-import ComputerIcon from "@mui/icons-material/Computer";
+import SplitScreen from "../components/content/SplitScreen";
+import SplitScrenRTL from "../components/content/SplitScreenRTL";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 
 export default function Home() {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <ComputerIcon fontSize="large" />
-      </div>
-      <Navbar />
       <div
         style={{
           backgroundImage: `url(${Background})`,
