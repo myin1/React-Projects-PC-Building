@@ -4,10 +4,27 @@ import { Typography, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/system";
+import SearchButton from "../components/SearchButton";
 
 function Home() {
   return (
     <div>
+      <Grid container justifyContent="space-between" alignItems="center">
+        <Grid item xs={4} />
+        <Grid
+          item
+          sx={{
+            textAlign: "center",
+            my: "auto",
+          }}
+          xs={4}
+        >
+          LOGO
+        </Grid>
+        <Grid item xs={4}>
+          <SearchButton />
+        </Grid>
+      </Grid>
       <Navbar />
       <div
         style={{
@@ -15,7 +32,7 @@ function Home() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          height: "100vh",
+          height: "90vh",
         }}
       >
         <Grid
@@ -26,10 +43,15 @@ function Home() {
           style={{ minHeight: "100vh" }}
         >
           <Grid item xs={3}>
-            <Typography variant="h1" color={"white"}>
+            <Typography variant="h1" color={"white"} textAlign={"center"}>
               Build A PC
             </Typography>
-            <Typography variant="h4" color={"white"}>
+            <Typography
+              variant="h4"
+              color={"white"}
+              textAlign={"center"}
+              sx={{ mb: 2 }}
+            >
               Find your Perfect PC Today
             </Typography>
             <Stack
@@ -37,10 +59,10 @@ function Home() {
               justifyContent={"center"}
               direction={"row"}
             >
-              <Button variant="contained" sx={{ mx: 2 }}>
+              <Button variant="contained" sx={{ mx: 2 }} size="large">
                 PC Builds
               </Button>
-              <Button variant="contained" sx={{ mx: 2 }}>
+              <Button variant="contained" sx={{ mx: 2 }} size="large">
                 Components
               </Button>
             </Stack>
@@ -50,14 +72,19 @@ function Home() {
       <div>
         <Container>
           <Grid container mt={5}>
-            <Grid item xs={6}>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
-                alt=""
-                style={{ height: "550px" }}
-              />
-            </Grid>
-            <Grid item xs={6}>
+            <Grid
+              item
+              xs={12}
+              lg={6}
+              sx={{
+                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png)`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                height: "550px",
+              }}
+            ></Grid>
+            <Grid item xs={12} lg={6}>
               <h1>Quality Service</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -66,6 +93,7 @@ function Home() {
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
                 pellentesque viverra maximus.
               </p>
+              <Button variant="contained">Learn More</Button>
             </Grid>
           </Grid>
         </Container>
@@ -73,7 +101,7 @@ function Home() {
       <div style={{ backgroundColor: "gray" }}>
         <Container>
           <Grid container mt={5}>
-            <Grid item xs={6} sx={{ color: "white" }}>
+            <Grid item xs={12} lg={6} sx={{ color: "white" }}>
               <h1>High Performance</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -82,14 +110,20 @@ function Home() {
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
                 pellentesque viverra maximus.
               </p>
+              <Button variant="contained">Learn More</Button>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/2/20/Avant-Tower-Gaming-PC.png"
-                alt=""
-                style={{ height: "90%" }}
-              />
-            </Grid>
+            <Grid
+              item
+              xs={12}
+              lg={6}
+              sx={{
+                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/2/20/Avant-Tower-Gaming-PC.png)`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                height: "550px",
+              }}
+            ></Grid>
           </Grid>
         </Container>
       </div>
