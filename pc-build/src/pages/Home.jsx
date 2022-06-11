@@ -1,30 +1,24 @@
+import * as React from "react";
 import Navbar from "../components/Navbar";
 import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_White_Wooden_Desk.jpg";
 import { Typography, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/system";
-import SearchButton from "../components/SearchButton";
+import ComputerIcon from "@mui/icons-material/Computer";
 
-function Home() {
+export default function Home() {
   return (
     <div>
-      <Grid container justifyContent="space-between" alignItems="center">
-        <Grid item xs={4} />
-        <Grid
-          item
-          sx={{
-            textAlign: "center",
-            my: "auto",
-          }}
-          xs={4}
-        >
-          LOGO
-        </Grid>
-        <Grid item xs={4}>
-          <SearchButton />
-        </Grid>
-      </Grid>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ComputerIcon fontSize="large" />
+      </div>
       <Navbar />
       <div
         style={{
@@ -130,5 +124,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

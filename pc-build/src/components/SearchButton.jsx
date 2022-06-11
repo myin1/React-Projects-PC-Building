@@ -2,6 +2,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   Box,
+  Button,
   ClickAwayListener,
   Collapse,
   IconButton,
@@ -24,24 +25,28 @@ export default function SearchButton() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row-reverse",
-          justifyContent: "flex-start",
-          color: "white",
         }}
       >
-        <IconButton onClick={handleChange}>
-          <SearchIcon fontSize="large" />
-        </IconButton>
-        <div>
-          <Collapse orientation="horizontal" in={open}>
+        <Collapse orientation="horizontal" in={open}>
+          <div>
             <TextField
               id="search"
               variant="standard"
               label="Search..."
-              sx={{ mb: 1 }}
+              color="info"
+              sx={{
+                input: { color: "white" },
+                borderColor: "white",
+              }}
             />
-          </Collapse>
-        </div>
+          </div>
+        </Collapse>
+        <IconButton color="inherit" edge="start" onClick={handleChange}>
+          <SearchIcon fontSize="large" />
+        </IconButton>
+        <Button sx={{ color: "inherit" }} variant="outlined">
+          Contact US
+        </Button>
       </Box>
     </ClickAwayListener>
   );
