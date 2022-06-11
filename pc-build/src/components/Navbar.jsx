@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -33,7 +34,9 @@ export default function Navbar() {
             color="inherit"
             disableRipple="True"
           >
-            <ComputerIcon />
+            <Link to="/">
+              <ComputerIcon />
+            </Link>
           </IconButton>
           {pages.map((page) => (
             <Button
