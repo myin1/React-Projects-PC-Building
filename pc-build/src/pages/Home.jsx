@@ -13,23 +13,6 @@ import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 function Home() {
   return (
     <div>
-      <Grid container justifyContent="space-between" alignItems="center">
-        <Grid item xs={4} />
-        <Grid
-          item
-          sx={{
-            textAlign: "center",
-            my: "auto",
-          }}
-          xs={4}
-        >
-          LOGO
-        </Grid>
-        <Grid item xs={4}>
-          <SearchButton />
-        </Grid>
-      </Grid>
-      <Navbar />
       <div
         style={{
           backgroundImage: `url(${Background})`,
