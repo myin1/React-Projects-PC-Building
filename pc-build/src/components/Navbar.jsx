@@ -78,7 +78,7 @@ export default function Navbar() {
           <Button
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
-            to=""
+            to="/ComputerTypes"
             id="types-button"
             onMouseOver={(event) => handleClick(event, "types-button")}
             endIcon={<ExpandMoreIcon />}
@@ -88,7 +88,7 @@ export default function Navbar() {
           <Button
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
-            to=""
+            to="/FAQ"
             onMouseEnter={handleClose}
           >
             FAQ
