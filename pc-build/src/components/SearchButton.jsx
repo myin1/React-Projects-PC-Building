@@ -44,9 +44,6 @@ export default function SearchButton() {
         <IconButton color="inherit" edge="start" onClick={handleChange}>
           <SearchIcon fontSize="large" />
         </IconButton>
-        <Button sx={{ color: "inherit" }} variant="outlined">
-          Contact US
-        </Button>
       </Box>
     </ClickAwayListener>
   );
