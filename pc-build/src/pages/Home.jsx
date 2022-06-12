@@ -5,9 +5,9 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SplitScreen from "../components/content/SplitScreen";
 import SplitScrenRTL from "../components/content/SplitScreenRTL";
-
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -45,10 +45,22 @@ export default function Home() {
               justifyContent={"center"}
               direction={"row"}
             >
-              <Button variant="contained" sx={{ mx: 2 }} size="large">
+              <Button
+                variant="contained"
+                component={Link}
+                to="/PCBuilds"
+                sx={{ mx: 2 }}
+                size="large"
+              >
                 PC Builds
               </Button>
-              <Button variant="contained" sx={{ mx: 2 }} size="large">
+              <Button
+                variant="contained"
+                component={Link}
+                to=""
+                sx={{ mx: 2 }}
+                size="large"
+              >
                 Components
               </Button>
             </Stack>

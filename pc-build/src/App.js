@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Prebuilt from "./pages/Prebuilt";
 import ComputerIcon from "@mui/icons-material/Computer";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} exact />
         <Route path="/PCBuilds" element={<Prebuilt />} />
+        <Route path="/FAQ" element={<FAQ />} />
       </Routes>
     </div>
   );
