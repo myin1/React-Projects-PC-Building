@@ -17,22 +17,22 @@ export default function PreBuilt() {
       </div>
       <div>
         <Container maxWidth="xl">
-          <Grid container my={5} spacing={2} columns={{ xs: 12, lg: 4 }}>
-            <Grid item xs={12} lg={4} sm="auto">
+          <Grid justifyContent="center" container my={5} spacing={2}>
+            <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Low Tier"
                 image={Avalanche}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
-            <Grid item xs={12} lg={4} sm="auto">
+            <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Medium Tier"
                 image={Avalanche}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
-            <Grid item xs={12} lg={4} sm="auto">
+            <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Pro Tier"
                 image={Avalanche}

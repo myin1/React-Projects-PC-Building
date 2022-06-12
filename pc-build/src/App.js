@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Prebuilt from "./pages/Prebuilt";
 import ComputerIcon from "@mui/icons-material/Computer";
 import FAQ from "./pages/FAQ";
+import Parts from "./pages/Parts";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} exact />
         <Route path="/PCBuilds" element={<Prebuilt />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Components" element={<Parts />} />
       </Routes>
     </div>
   );
