@@ -16,7 +16,7 @@ export default function FAQ() {
     <div>
       <Container>
         {questions.map((question, index) => (
-          <AccordionItem question={question} answer={answers[index]} />
+          <AccordionItem summary={question} detail={answers[index]} />
         ))}
       </Container>
     </div>
