@@ -17,7 +17,7 @@ const components = [
   "Storage",
   "CPU",
   "GPU",
-  "RAM",
+  "Memory",
   "Cooling",
   "Case",
 ];
@@ -69,6 +69,7 @@ export default function Navbar() {
               {page}
             </Button>
           ))}
+
           <Menu
             id="components-menu"
             anchorEl={anchorEl}
@@ -89,6 +90,7 @@ export default function Navbar() {
               </MenuItem>
             ))}
           </Menu>
+
           <Menu
             id="pcType-menu"
             anchorEl={anchorEl}
