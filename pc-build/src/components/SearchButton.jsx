@@ -37,7 +37,6 @@ export default function SearchButton() {
               sx={{
                 input: { color: "white" },
                 borderColor: "white",
-                color: "white",
               }}
             />
           </div>
