@@ -69,7 +69,7 @@ export default function Navbar() {
             id="components-button"
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
-            to=""
+            to="/Components"
             onMouseEnter={(event) => handleClick(event, "components-button")}
             endIcon={<ExpandMoreIcon />}
           >

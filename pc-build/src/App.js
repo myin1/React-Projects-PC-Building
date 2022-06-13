@@ -13,6 +13,7 @@ import ProductionPc from "./pages/CompTypePages/ProductionPc";
 import StreamingPc from "./pages/CompTypePages/StreamingPc";
 import TheaterPc from "./pages/CompTypePages/TheaterPc";
 import VrPc from "./pages/CompTypePages/VrPc";
+import Parts from "./pages/Parts";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         </Route>
         <Route path="/PCBuilds" element={<Prebuilt />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Components" element={<Parts />} />
       </Routes>
     </div>
   );

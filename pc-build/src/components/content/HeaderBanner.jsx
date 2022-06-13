@@ -20,7 +20,7 @@ export default function HeaderBanner(props) {
         justifyContent="center"
         style={{ minHeight: "100vh" }}
       >
-        <Grid item xs={3}>
+        <Grid item sm={3}>
           <Typography variant="h1" color={"white"} textAlign={"center"}>
             {props.title}
           </Typography>
