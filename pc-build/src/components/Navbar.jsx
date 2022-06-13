@@ -125,7 +125,11 @@ export default function Navbar() {
             }}
           >
             {types.map((types) => (
-              <MenuItem onClick={handleClose} component={Link} to={types}>
+              <MenuItem
+                onClick={handleClose}
+                component={Link}
+                to={"/ComputerTypes/" + types}
+              >
                 {types}
               </MenuItem>
             ))}

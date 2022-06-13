@@ -1,3 +1,3 @@
 export default function GamingPc() {
-  return <div></div>;
+  return <div>GamingPc</div>;
 }

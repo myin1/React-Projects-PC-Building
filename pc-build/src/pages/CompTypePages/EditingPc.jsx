@@ -1,3 +1,3 @@
 export default function EditingPc() {
-  return <div></div>;
+  return <div>EditingPc</div>;
 }

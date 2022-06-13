@@ -1,4 +1,12 @@
 import { Box } from "@mui/system";
+import {
+  Route,
+  Routes,
+  Link,
+  Outlet,
+  matchPath,
+  useLocation,
+} from "react-router-dom";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
@@ -14,18 +22,10 @@ const compTypes = [
   "Theater",
   "VR",
 ];
-const description = [
-  "Hi Hello",
-  "Hola hola",
-  "Hallo Hallo",
-  "Kon'nichiwa kon'nichiwa",
-  "description",
-  "description",
-  "description",
-];
 
 export default function ComputerTypes() {
   const [value, setValue] = React.useState(0);
+  const routeMatch = useRouteMatch(["/inbox/:id", "/drafts", "/trash"]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -36,6 +36,39 @@ export default function ComputerTypes() {
       id: `simple-tab-${index}`,
       "aria-controls": `simple-tabpanel-${index}`,
     };
+  }
+
+  function Invoices() {
+    return (
+      <div>
+        <h1>Invoices</h1>
+        <Outlet />
+      </div>
+    );
+  }
+
+  function headerTab(compType, index) {
+    return (
+      <Tab
+        label={compType}
+        component={Link}
+        to={compType}
+        {...a11yProps(index)}
+      />
+    );
+  }
+
+  function useRouteMatch(patterns) {
+    const { pathname } = useLocation();
+
+    for (let i = 0; i < patterns.length; i += 1) {
+      const pattern = patterns[i];
+      const possibleMatch = matchPath(pattern, pathname);
+      if (possibleMatch !== null) {
+        return possibleMatch;
+      }
+    }
+    return null;
   }
 
   return (
@@ -55,14 +88,14 @@ export default function ComputerTypes() {
               onChange={handleChange}
               aria-label="wrapped label"
             >
-              {compTypes.map((compTypes, index) => (
-                <Tab label={compTypes} {...a11yProps(index)} />
-              ))}
+              {compTypes.map((compType, index) => {
+                return headerTab(compType, index);
+              })}
             </Tabs>
           </Box>
           {compTypes.map((compTypes, index) => (
             <TabContent value={value} index={index}>
-              {description[index]}
+              <Outlet />
             </TabContent>
           ))}
         </Box>

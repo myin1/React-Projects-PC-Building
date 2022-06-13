@@ -1,3 +1,3 @@
 export default function TheaterPc() {
-  return <div></div>;
+  return <div>TheaterPc</div>;
 }

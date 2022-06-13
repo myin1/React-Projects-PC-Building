@@ -1,3 +1,3 @@
 export default function VrPc() {
-  return <div></div>;
+  return <div>VrPc</div>;
 }

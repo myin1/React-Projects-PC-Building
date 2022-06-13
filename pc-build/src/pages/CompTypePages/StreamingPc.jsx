@@ -1,3 +1,3 @@
 export default function StreamingPc() {
-  return <div></div>;
+  return <div>StreamingPc</div>;
 }
