@@ -12,10 +12,10 @@ export default function AccordionItem(props) {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography>{props.question}</Typography>
+        <Typography>{props.summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{props.answer}</Typography>
+        <Typography>{props.details}</Typography>
       </AccordionDetails>
     </Accordion>
   );
