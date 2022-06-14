@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import BoltIcon from "@mui/icons-material/Bolt";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import SpeedIcon from "@mui/icons-material/Speed";
+import { styled, alpha } from "@mui/material/styles";
 
 export default function Home() {
   return (
@@ -29,15 +30,18 @@ export default function Home() {
           direction="column"
           alignItems="center"
           justifyContent="center"
-          style={{ minHeight: "100vh" }}
+          sx={{
+            backgroundColor: (theme) => alpha(theme.palette.common.white, 0.5),
+            minHeight: "100vh",
+          }}
         >
           <Grid item xs={3}>
-            <Typography variant="h1" color={"white"} textAlign={"center"}>
+            <Typography variant="h1" color={"#1565c0"} textAlign={"center"}>
               Build A PC
             </Typography>
             <Typography
               variant="h4"
-              color={"white"}
+              color={"#1565c0"}
               textAlign={"center"}
               sx={{ mb: 2 }}
             >
@@ -51,7 +55,7 @@ export default function Home() {
               <Button
                 variant="contained"
                 component={Link}
-                to="/PCBuilds"
+                to="PCBuilds"
                 sx={{ mx: 2 }}
                 size="large"
               >
@@ -60,7 +64,7 @@ export default function Home() {
               <Button
                 variant="contained"
                 component={Link}
-                to=""
+                to="Components"
                 sx={{ mx: 2 }}
                 size="large"
               >

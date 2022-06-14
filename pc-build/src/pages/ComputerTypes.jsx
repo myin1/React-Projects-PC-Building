@@ -47,7 +47,7 @@ export default function ComputerTypes() {
       const pattern = patterns[i];
       if (String(pathname).includes(pattern)) {
         const possibleMatch = pattern;
-        console.log(possibleMatch);
+        // console.log(possibleMatch);
         return possibleMatch;
       }
     }
@@ -56,7 +56,7 @@ export default function ComputerTypes() {
 
   // Get the value to equal the current route and then set the state of the page to the desired tab?
   const [value, setValue] = React.useState(indexToTabName[routeMatch]);
-  console.log(value);
+  // console.log(value);
 
   // Used to change the value of the state after a new tab or menu item is chosen
   const handleChange = (event, newValue) => {
@@ -95,11 +95,13 @@ export default function ComputerTypes() {
       <div>
         {compTypes.map((compType, index) => (
           // Get the value to equal the current route and then get the respective content from the AllPc component page
-          <TabContent value={indexToTabName[routeMatch]} index={index}>
-            <Routes>
-              <Route path={compType} element={<AllPc name={compType} />} />
-            </Routes>
-          </TabContent>
+          <Box sx={{ backgroundColor: "gray" }}>
+            <TabContent value={indexToTabName[routeMatch]} index={index}>
+              <Routes>
+                <Route path={compType} element={<AllPc name={compType} />} />
+              </Routes>
+            </TabContent>
+          </Box>
         ))}
       </div>
     </div>

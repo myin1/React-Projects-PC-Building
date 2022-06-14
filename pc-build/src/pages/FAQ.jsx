@@ -15,12 +15,12 @@ const answers = ["answer1", "answer2", "answer3", "answer4", "answer5"];
 export default function FAQ() {
   return (
     <div>
-      <Typography variant="h1" textAlign="center" mt={3}>
-        FAQ
+      <Typography variant="h2" textAlign="center" mt={3}>
+        Frequently Asked Questions
       </Typography>
       <Container sx={{ marginTop: 3 }}>
         {questions.map((question, index) => (
-          <AccordionItem summary={question} detail={answers[index]} />
+          <AccordionItem summary={question} details={answers[index]} />
         ))}
       </Container>
     </div>
