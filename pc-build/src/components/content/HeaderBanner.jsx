@@ -1,6 +1,5 @@
 import Grid from "@mui/material/Grid";
 import { Typography, Stack } from "@mui/material";
-import Button from "@mui/material/Button";
 
 export default function HeaderBanner(props) {
   return (
@@ -10,7 +9,7 @@ export default function HeaderBanner(props) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "90vh",
+        height: "70vh",
       }}
     >
       <Grid
@@ -18,9 +17,9 @@ export default function HeaderBanner(props) {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: "100vh" }}
+        style={{ minHeight: "70vh" }}
       >
-        <Grid item xs={3}>
+        <Grid item sm={3}>
           <Typography variant="h1" color={"white"} textAlign={"center"}>
             {props.title}
           </Typography>

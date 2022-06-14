@@ -2,7 +2,6 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import {
   Box,
-  Button,
   ClickAwayListener,
   Collapse,
   IconButton,
@@ -44,9 +43,6 @@ export default function SearchButton() {
         <IconButton color="inherit" edge="start" onClick={handleChange}>
           <SearchIcon fontSize="large" />
         </IconButton>
-        <Button sx={{ color: "inherit" }} variant="outlined">
-          Contact US
-        </Button>
       </Box>
     </ClickAwayListener>
   );

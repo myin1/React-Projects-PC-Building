@@ -10,7 +10,6 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const pages = ["PC Builds", "Components", "PC Types", "FAQ"];
 const components = [
   "Motherboard",
   "Power Supply",
@@ -27,7 +26,7 @@ const types = [
   "Streaming",
   "Production",
   "Editing",
-  "Theather",
+  "Theater",
   "VR",
 ];
 let menu = null;
@@ -35,16 +34,17 @@ let menu = null;
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event, key) => {
+
+  const handleClick = (event, id) => {
     setAnchorEl(event.currentTarget);
-    menu = key;
+    menu = id;
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" style={{ zIndex: 1301 }}>
       <Toolbar>
         <Box sx={{ flexGrow: 1 }}>
           <IconButton
@@ -57,23 +57,46 @@ export default function Navbar() {
           >
             <ComputerIcon />
           </IconButton>
-
-          {pages.map((page) => (
-            <Button
-              key={page}
-              onMouseOver={(event) => handleClick(event, page)}
-              sx={{ color: "inherit" }}
-              component={Link}
-              to={page.replace(/\s+/g, "")}
-            >
-              {page}
-            </Button>
-          ))}
-
+          <Button
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
+            to="/PCBuilds"
+            onMouseEnter={handleClose}
+          >
+            PC Builds
+          </Button>
+          <Button
+            id="components-button"
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
+            to="/Components"
+            onMouseEnter={(event) => handleClick(event, "components-button")}
+            endIcon={<ExpandMoreIcon />}
+          >
+            Components
+          </Button>
+          <Button
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
+            to="/ComputerTypes"
+            id="types-button"
+            onMouseOver={(event) => handleClick(event, "types-button")}
+            endIcon={<ExpandMoreIcon />}
+          >
+            PC Types
+          </Button>
+          <Button
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
+            to="/FAQ"
+            onMouseEnter={handleClose}
+          >
+            FAQ
+          </Button>
           <Menu
             id="components-menu"
             anchorEl={anchorEl}
-            open={open && menu === "Components"}
+            open={open && menu === "components-button"}
             onClose={handleClose}
             MenuListProps={{
               "aria-labelledby": "basic-button",
@@ -94,7 +117,7 @@ export default function Navbar() {
           <Menu
             id="pcType-menu"
             anchorEl={anchorEl}
-            open={open && menu === "PC Types"}
+            open={open && menu === "types-button"}
             onClose={handleClose}
             MenuListProps={{
               "aria-labelledby": "basic-button",
@@ -102,13 +125,18 @@ export default function Navbar() {
             }}
           >
             {types.map((types) => (
-              <MenuItem onClick={handleClose} component={Link} to={types}>
+              <MenuItem
+                onClick={handleClose}
+                component={Link}
+                to={"/ComputerTypes/" + types}
+              >
                 {types}
               </MenuItem>
             ))}
           </Menu>
         </Box>
         <SearchButton />
+        <Button sx={{ color: "inherit", height: "64px" }}>Contact US</Button>
       </Toolbar>
     </AppBar>
   );
