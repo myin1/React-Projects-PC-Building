@@ -5,7 +5,7 @@ import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
 import * as React from "react";
 import TabContent from "../components/content/TabContent";
-import AllPc from "./CompTypePages/AllPc";
+import AllPc from "./ComponentPages/AllPc";
 
 const compTypes = [
   "Entertainment",
