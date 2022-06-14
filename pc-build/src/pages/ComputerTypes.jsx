@@ -1,17 +1,18 @@
 import { Box } from "@mui/system";
-import {
-  Route,
-  Routes,
-  Link,
-  Outlet,
-  matchPath,
-  useLocation,
-} from "react-router-dom";
+import { Link, useLocation, Routes, Route } from "react-router-dom";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
 import * as React from "react";
 import TabContent from "../components/content/TabContent";
+// import EntertainmentPc from "./CompTypePages/EntertainmentPc";
+// import EditingPc from "./CompTypePages/EditingPc";
+// import GamingPc from "./CompTypePages/GamingPc";
+// import ProductionPc from "./CompTypePages/ProductionPc";
+// import StreamingPc from "./CompTypePages/StreamingPc";
+// import TheaterPc from "./CompTypePages/TheaterPc";
+// import VrPc from "./CompTypePages/VrPc";
+import AllPc from "./CompTypePages/AllPc";
 
 const compTypes = [
   "Entertainment",
@@ -24,51 +25,50 @@ const compTypes = [
 ];
 
 export default function ComputerTypes() {
-  const [value, setValue] = React.useState(0);
-  const routeMatch = useRouteMatch(["/inbox/:id", "/drafts", "/trash"]);
+  const routeMatch = useRouteMatch(compTypes);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const tabNameToIndex = {
+    0: "Entertainment",
+    1: "Gaming",
+    2: "Streaming",
+    3: "Production",
+    4: "Editing",
+    5: "Theater",
+    6: "VR",
   };
 
-  function a11yProps(index) {
-    return {
-      id: `simple-tab-${index}`,
-      "aria-controls": `simple-tabpanel-${index}`,
-    };
-  }
-
-  function Invoices() {
-    return (
-      <div>
-        <h1>Invoices</h1>
-        <Outlet />
-      </div>
-    );
-  }
-
-  function headerTab(compType, index) {
-    return (
-      <Tab
-        label={compType}
-        component={Link}
-        to={compType}
-        {...a11yProps(index)}
-      />
-    );
-  }
+  const indexToTabName = {
+    Entertainment: 0,
+    Gaming: 1,
+    Streaming: 2,
+    Production: 3,
+    Editing: 4,
+    Theater: 5,
+    VR: 6,
+  };
 
   function useRouteMatch(patterns) {
     const { pathname } = useLocation();
 
     for (let i = 0; i < patterns.length; i += 1) {
       const pattern = patterns[i];
-      const possibleMatch = matchPath(pattern, pathname);
-      if (possibleMatch !== null) {
+      if (String(pathname).includes(pattern)) {
+        const possibleMatch = pattern;
+        console.log(possibleMatch);
         return possibleMatch;
       }
     }
     return null;
+  }
+
+  const [value, setValue] = React.useState(indexToTabName[routeMatch]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  function headerTab(compType, index) {
+    return <Tab label={compType} component={Link} to={compType} />;
   }
 
   return (
@@ -93,9 +93,11 @@ export default function ComputerTypes() {
               })}
             </Tabs>
           </Box>
-          {compTypes.map((compTypes, index) => (
+          {compTypes.map((compType, index) => (
             <TabContent value={value} index={index}>
-              <Outlet />
+              <Routes>
+                <Route path={compType} element={<AllPc name={compType} />} />
+              </Routes>
             </TabContent>
           ))}
         </Box>

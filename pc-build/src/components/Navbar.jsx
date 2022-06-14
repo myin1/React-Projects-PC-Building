@@ -26,7 +26,7 @@ const types = [
   "Streaming",
   "Production",
   "Editing",
-  "Theather",
+  "Theater",
   "VR",
 ];
 let menu = null;
