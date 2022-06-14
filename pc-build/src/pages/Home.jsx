@@ -1,6 +1,6 @@
 import * as React from "react";
 import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_White_Wooden_Desk.jpg";
-import { Typography, Stack } from "@mui/material";
+import { Typography, Stack, Container } from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SplitScreen from "../components/content/SplitScreen";
@@ -8,6 +8,9 @@ import SplitScrenRTL from "../components/content/SplitScreenRTL";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 import { Link } from "react-router-dom";
+import BoltIcon from "@mui/icons-material/Bolt";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import SpeedIcon from "@mui/icons-material/Speed";
 
 export default function Home() {
   return (
@@ -66,6 +69,36 @@ export default function Home() {
             </Stack>
           </Grid>
         </Grid>
+      </div>
+      <div style={{ backgroundColor: "#bbdefb" }}>
+        <Container sx={{ textAlign: "center", pb: 15 }}>
+          <Typography variant="h4" p={5}>
+            A Simpler Way of Building Your New PC
+          </Typography>
+          <Grid container spacing={3}>
+            <Grid item lg={4}>
+              <BoltIcon fontSize="large" />
+              <Typography variant="h6">Powerful Builds</Typography>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Typography>
+            </Grid>
+            <Grid item lg={4}>
+              <SpeedIcon fontSize="large" />
+              <Typography variant="h6">Fast Service</Typography>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Typography>
+            </Grid>
+            <Grid item lg={4}>
+              <ConstructionIcon fontSize="large" />
+              <Typography variant="h6">Guaranteed Quality</Typography>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Container>
       </div>
       <div>
         <SplitScreen

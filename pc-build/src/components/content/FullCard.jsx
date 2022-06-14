@@ -12,9 +12,9 @@ import {
 
 export default function FullCard(props) {
   return (
-    <Grid item component={Card} variant="outlined" lg={3}>
+    <Grid item component={Card} variant="outlined" xs={12} md={6} lg={3}>
       <CardHeader title={props.title} />
-      <Box sx={{ height: "400px" }}>
+      <Box sx={{ height: { md: "500px", lg: "400px" } }}>
         <CardMedia
           component="img"
           objectFit="cover"

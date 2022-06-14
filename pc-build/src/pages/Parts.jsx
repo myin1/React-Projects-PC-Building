@@ -1,7 +1,9 @@
-import { Card, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import FullCard from "../components/content/FullCard";
+import HeaderBanner from "../components/content/HeaderBanner";
 
+import Background from "../assets/images/4._jbl_quantum_350_wireless-scaled.webp";
 import Mobo from "../assets/images/ASUS_ROG_STRIX_Z490-I_GAMING.png";
 import RAM from "../assets/images/2014_Corsair_Dominator_Platinum_2x4GB,_1866MHz.jpg";
 import GPU from "../assets/images/5385857910_63f6d85035_b.jpg";
@@ -14,9 +16,9 @@ import Fan from "../assets/images/computers-88000_1280.webp";
 export default function Parts() {
   return (
     <div>
-      <Typography variant="h1" textAlign="center" mt={3}>
-        PC Components
-      </Typography>
+      <div>
+        <HeaderBanner background={Background} title="PC Components" />
+      </div>
       <Container>
         <Grid container alignItems="stretch" my={5}>
           <FullCard
