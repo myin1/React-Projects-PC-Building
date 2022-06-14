@@ -5,13 +5,6 @@ import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
 import * as React from "react";
 import TabContent from "../components/content/TabContent";
-// import EntertainmentPc from "./CompTypePages/EntertainmentPc";
-// import EditingPc from "./CompTypePages/EditingPc";
-// import GamingPc from "./CompTypePages/GamingPc";
-// import ProductionPc from "./CompTypePages/ProductionPc";
-// import StreamingPc from "./CompTypePages/StreamingPc";
-// import TheaterPc from "./CompTypePages/TheaterPc";
-// import VrPc from "./CompTypePages/VrPc";
 import AllPc from "./CompTypePages/AllPc";
 
 const compTypes = [
@@ -25,8 +18,6 @@ const compTypes = [
 ];
 
 export default function ComputerTypes() {
-  const routeMatch = useRouteMatch(compTypes);
-
   const tabNameToIndex = {
     0: "Entertainment",
     1: "Gaming",
@@ -46,6 +37,8 @@ export default function ComputerTypes() {
     Theater: 5,
     VR: 6,
   };
+
+  const routeMatch = useRouteMatch(compTypes);
 
   function useRouteMatch(patterns) {
     const { pathname } = useLocation();
@@ -84,7 +77,7 @@ export default function ComputerTypes() {
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
-              value={value}
+              value={indexToTabName[routeMatch]}
               onChange={handleChange}
               aria-label="wrapped label"
             >
@@ -94,7 +87,7 @@ export default function ComputerTypes() {
             </Tabs>
           </Box>
           {compTypes.map((compType, index) => (
-            <TabContent value={value} index={index}>
+            <TabContent value={indexToTabName[routeMatch]} index={index}>
               <Routes>
                 <Route path={compType} element={<AllPc name={compType} />} />
               </Routes>
