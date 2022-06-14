@@ -18,15 +18,15 @@ const compTypes = [
 ];
 
 export default function ComputerTypes() {
-  const tabNameToIndex = {
-    0: "Entertainment",
-    1: "Gaming",
-    2: "Streaming",
-    3: "Production",
-    4: "Editing",
-    5: "Theater",
-    6: "VR",
-  };
+  // const tabNameToIndex = {
+  //   0: "Entertainment",
+  //   1: "Gaming",
+  //   2: "Streaming",
+  //   3: "Production",
+  //   4: "Editing",
+  //   5: "Theater",
+  //   6: "VR",
+  // };
 
   const indexToTabName = {
     Entertainment: 0,
@@ -39,7 +39,7 @@ export default function ComputerTypes() {
   };
 
   const routeMatch = useRouteMatch(compTypes);
-
+  // function used to match current path to one of the comptypes listed above, if there's a match then return the match
   function useRouteMatch(patterns) {
     const { pathname } = useLocation();
 
@@ -54,12 +54,15 @@ export default function ComputerTypes() {
     return null;
   }
 
+  // Get the value to equal the current route and then set the state of the page to the desired tab?
   const [value, setValue] = React.useState(indexToTabName[routeMatch]);
+  console.log(value);
 
+  // Used to change the value of the state after a new tab or menu item is chosen
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  // Used to create each tab component fot the user to click
   function headerTab(compType, index) {
     return <Tab label={compType} component={Link} to={compType} />;
   }
@@ -74,26 +77,30 @@ export default function ComputerTypes() {
         />
       </div>
       <div>
-        <Box sx={{ width: "100%" }}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <Tabs
-              value={indexToTabName[routeMatch]}
-              onChange={handleChange}
-              aria-label="wrapped label"
-            >
-              {compTypes.map((compType, index) => {
-                return headerTab(compType, index);
-              })}
-            </Tabs>
-          </Box>
-          {compTypes.map((compType, index) => (
-            <TabContent value={indexToTabName[routeMatch]} index={index}>
-              <Routes>
-                <Route path={compType} element={<AllPc name={compType} />} />
-              </Routes>
-            </TabContent>
-          ))}
+        <Box display="flex" justifyContent="center" width="100%">
+          <Tabs
+            value={indexToTabName[routeMatch]}
+            onChange={handleChange}
+            aria-label="wrapped label"
+            variant="scrollable"
+            sx={{ borderBottom: 1, borderColor: "divider" }}
+          >
+            {compTypes.map((compType, index) => {
+              // a form of loop to get all tabs created that correspond to the comptypes list
+              return headerTab(compType, index);
+            })}
+          </Tabs>
         </Box>
+      </div>
+      <div>
+        {compTypes.map((compType, index) => (
+          // Get the value to equal the current route and then get the respective content from the AllPc component page
+          <TabContent value={indexToTabName[routeMatch]} index={index}>
+            <Routes>
+              <Route path={compType} element={<AllPc name={compType} />} />
+            </Routes>
+          </TabContent>
+        ))}
       </div>
     </div>
   );

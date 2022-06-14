@@ -3,7 +3,7 @@ import SplitScreen from "../../components/content/SplitScreen";
 
 export default function AllPc(props) {
   return (
-    <div style={{ backgroundColor: "white" }}>
+    <div style={{ backgroundColor: "grey" }}>
       <SplitScreen
         image={Avalanche}
         title={props.name}
