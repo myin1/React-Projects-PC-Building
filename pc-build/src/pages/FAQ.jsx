@@ -20,7 +20,7 @@ export default function FAQ() {
       </Typography>
       <Container sx={{ marginTop: 3 }}>
         {questions.map((question, index) => (
-          <AccordionItem question={question} answer={answers[index]} />
+          <AccordionItem summary={question} detail={answers[index]} />
         ))}
       </Container>
     </div>

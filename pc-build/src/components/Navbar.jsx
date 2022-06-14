@@ -26,7 +26,7 @@ const types = [
   "Streaming",
   "Production",
   "Editing",
-  "Theather",
+  "Theater",
   "VR",
 ];
 let menu = null;
@@ -78,7 +78,7 @@ export default function Navbar() {
           <Button
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
-            to=""
+            to="/ComputerTypes"
             id="types-button"
             onMouseOver={(event) => handleClick(event, "types-button")}
             endIcon={<ExpandMoreIcon />}
@@ -125,7 +125,11 @@ export default function Navbar() {
             }}
           >
             {types.map((types) => (
-              <MenuItem onClick={handleClose} component={Link} to={types}>
+              <MenuItem
+                onClick={handleClose}
+                component={Link}
+                to={"/ComputerTypes/" + types}
+              >
                 {types}
               </MenuItem>
             ))}

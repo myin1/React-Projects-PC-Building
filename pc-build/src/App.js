@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Prebuilt from "./pages/Prebuilt";
 import ComputerIcon from "@mui/icons-material/Computer";
 import FAQ from "./pages/FAQ";
+import ComputerTypes from "./pages/ComputerTypes";
 import Parts from "./pages/Parts";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} exact />
+        <Route path="/ComputerTypes/*" element={<ComputerTypes />} />
         <Route path="/PCBuilds" element={<Prebuilt />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Components" element={<Parts />} />
