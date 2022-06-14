@@ -59,7 +59,7 @@ export default function PreBuilt() {
       </div>
       <div>
         <Container maxWidth="xl">
-          <Grid justifyContent="center" container my={5} spacing={2}>
+          <Grid container my={5} spacing={2}>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Low Tier"
