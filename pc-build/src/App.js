@@ -7,23 +7,32 @@ import ComputerIcon from "@mui/icons-material/Computer";
 import FAQ from "./pages/FAQ";
 import ComputerTypes from "./pages/ComputerTypes";
 import Parts from "./pages/Parts";
+import AllPc from "./pages/ComponentPages/AllPc";
+
+function WhiteBar() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <ComputerIcon fontSize="large" />
+    </div>
+  );
+}
 
 function App() {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <ComputerIcon fontSize="large" />
-      </div>
+      <WhiteBar />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} exact />
-        <Route path="/ComputerTypes/*" element={<ComputerTypes />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/ComputerTypes" element={<ComputerTypes />}>
+          <Route path=":computerType" element={<AllPc />} />
+        </Route>
         <Route path="/PCBuilds" element={<Prebuilt />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Components" element={<Parts />} />

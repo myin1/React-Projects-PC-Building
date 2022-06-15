@@ -12,11 +12,7 @@ export default function AccordionItem(props) {
       expanded={props.accordionExpanded === props.panel}
       onChange={props.accordionFunction(props.panel)}
     >
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
-      >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />} id="panel1a-header">
         <Typography>{props.summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>

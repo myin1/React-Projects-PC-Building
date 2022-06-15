@@ -13,6 +13,9 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import SpeedIcon from "@mui/icons-material/Speed";
 import { styled, alpha } from "@mui/material/styles";
 
+// Color Pallete choices: #AFE3C0 (turqiouse green), #3F3F37 (black olive), #EEE5E9 (lavendar)
+// #92DCE5 (middle blue)
+
 export default function Home() {
   return (
     <div>
@@ -115,7 +118,7 @@ export default function Home() {
                 pellentesque viverra maximus."
         />
       </div>
-      <div style={{ backgroundColor: "gray" }}>
+      <div style={{ backgroundColor: "lightgray" }}>
         <SplitScrenRTL
           image={Avant}
           title="High Performance"
