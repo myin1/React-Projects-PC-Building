@@ -31,6 +31,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ComputerTypes" element={<ComputerTypes />}>
+          <Route
+            index
+            element={<h1 style={{ textAlign: "center" }}>Overview</h1>}
+          />
           <Route path=":computerType" element={<AllPc />} />
         </Route>
         <Route path="/PCBuilds" element={<Prebuilt />} />

@@ -1,4 +1,3 @@
-import * as React from "react";
 import HeaderBanner from "../components/content/HeaderBanner";
 import PromoCard from "../components/content/PromoCard";
 import SpanningTable from "../components/content/SpanningTable";
@@ -10,217 +9,45 @@ import { Container } from "@mui/system";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 
 export default function PreBuilt() {
-  const components = ["CPU", "Motherboard", "GPU", "RAM", "Storage", "Case"];
-  const accordionLists = [
-    {
-      label: "Entertainment",
-      panel: "panel1",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "Gaming",
-      panel: "panel2",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "Streaming",
-      panel: "panel3",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "Production",
-      panel: "panel4",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "Editing",
-      panel: "panel5",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "Theater",
-      panel: "panel6",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
-    {
-      label: "VR",
-      panel: "panel7",
-      header: ["Low Tier", "Mid Tier", "High Tier"],
-      lowTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      midTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-      highTier: [
-        "Ryzen 5 5600",
-        "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
-        "Be Quiet Dark Base 500Dx",
-      ],
-    },
+  const types = [
+    "Entertainment",
+    "Gaming",
+    "Streaming",
+    "Production",
+    "Editing",
+    "Theather",
+    "VR",
   ];
-  const [accordionIsExpanded, setAccordionIsExpanded] = React.useState(true);
 
-  const accordionExpansionHandler = (panel) => (event, isExpanded) => {
-    setAccordionIsExpanded(isExpanded ? panel : false);
-  };
+  const components = ["CPU", "Motherboard", "GPU", "RAM", "Storage", "Case"];
+
+  const description1 = [
+    "Ryzen 5 5600",
+    "Aorus X570 Pro Wifi",
+    "Radeon Rx 5700",
+    "G.Skill 16GB 3600Mbs",
+    "1TB 980 Samsung Evo",
+    "Be Quiet Dark Base 500Dx",
+  ];
+
+  const description2 = [
+    "Ryzen 7 5800x",
+    "x570 Dark Hero",
+    "Nvidia Rtx 3070",
+    "G.Skill 32GB 3600Mbs",
+    "1TB 970 Samsung Evo Plus",
+    "Be Quiet Dark Base 500Dx",
+  ];
+
+  const description3 = [
+    "Ryzen 9 5950x",
+    "x570 Dark Hero",
+    "Nvidia Rtx 3080",
+    "G.Skill 32GB 3600Mbs",
+    "1TB 970 Samsung Evo Pro",
+    "Be Quiet Dark Base 500Dx",
+  ];
+
   return (
     <div>
       <div>
@@ -258,20 +85,17 @@ export default function PreBuilt() {
         </Container>
       </div>
       <div>
-        {accordionLists.map((list) => (
+        {types.map((types) => (
           <AccordionItem
-            summary={list.label}
+            summary={types}
             details={
               <SpanningTable
                 header={components}
-                description1={list.lowTier}
-                description2={list.midTier}
-                description3={list.highTier}
+                description1={description1}
+                description2={description2}
+                description3={description3}
               />
             }
-            accordionExpanded={accordionIsExpanded}
-            accordionFunction={accordionExpansionHandler}
-            panel={list.panel}
           />
         ))}
       </div>

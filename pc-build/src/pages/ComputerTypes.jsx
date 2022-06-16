@@ -25,7 +25,7 @@ export default function ComputerTypes() {
         title="Build Ideas"
         description="Take a look at our builds"
       />
-      <Tabs value={params.computerType} centered>
+      <Tabs value={params.computerType} variant="scrollable">
         {compTypes.map((compTypes) => (
           <Tab
             value={compTypes}
@@ -37,7 +37,7 @@ export default function ComputerTypes() {
           </Tab>
         ))}
       </Tabs>
-      <div style={{ backgroundColor: "grey" }}>
+      <div style={{ backgroundColor: "grey", padding: 1 }}>
         <Outlet />
       </div>
     </div>

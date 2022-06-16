@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import BoltIcon from "@mui/icons-material/Bolt";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import SpeedIcon from "@mui/icons-material/Speed";
-import { styled, alpha } from "@mui/material/styles";
+import { alpha } from "@mui/material/styles";
 
 // Color Pallete choices: #AFE3C0 (turqiouse green), #3F3F37 (black olive), #EEE5E9 (lavendar)
 // #92DCE5 (middle blue)
@@ -82,22 +82,22 @@ export default function Home() {
           <Typography variant="h4" p={5}>
             A Simpler Way of Building Your New PC
           </Typography>
-          <Grid container spacing={3}>
-            <Grid item lg={4}>
+          <Grid container alignContent="center" spacing={3}>
+            <Grid item sm={12} lg={4}>
               <BoltIcon fontSize="large" />
               <Typography variant="h6">Powerful Builds</Typography>
               <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item sm={12} lg={4}>
               <SpeedIcon fontSize="large" />
               <Typography variant="h6">Fast Service</Typography>
               <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item sm={12} lg={4}>
               <ConstructionIcon fontSize="large" />
               <Typography variant="h6">Guaranteed Quality</Typography>
               <Typography>

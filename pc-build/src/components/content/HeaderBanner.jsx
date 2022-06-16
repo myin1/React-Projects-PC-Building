@@ -9,7 +9,7 @@ export default function HeaderBanner(props) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "70vh",
+        height: "60vh",
       }}
     >
       <Grid
