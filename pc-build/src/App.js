@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, R } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Prebuilt from "./pages/Prebuilt";
