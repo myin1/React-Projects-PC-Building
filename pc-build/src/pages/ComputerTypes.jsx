@@ -18,20 +18,6 @@ export default function ComputerTypes() {
   //grabs URL parameter to use as value
   let params = useParams();
 
-  function nullHandler(path) {
-    if (path == null) {
-      return (
-        <div>
-          <TabContent>
-            <Routes>
-              <Route path="overview" element={<AllPc name="overview" />} />
-            </Routes>
-          </TabContent>
-        </div>
-      );
-    }
-  }
-
   return (
     <div>
       <HeaderBanner
