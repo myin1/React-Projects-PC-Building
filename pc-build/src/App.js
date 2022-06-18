@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, R } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Prebuilt from "./pages/Prebuilt";
@@ -29,6 +29,7 @@ function App() {
       <WhiteBar />
       <Navbar />
       <Routes>
+        <Route path="/React-Projects-PC-Building/" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/ComputerTypes" element={<ComputerTypes />}>
           <Route
