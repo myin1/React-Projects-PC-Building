@@ -2,7 +2,7 @@
   "name": "pc-build",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myin1.github.io/React-Projects-PC-Building/pc-build",
+  "homepage": "https://myin1.github.io/React-Projects-PC-Building",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
