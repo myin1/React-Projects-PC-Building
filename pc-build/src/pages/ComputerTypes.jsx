@@ -67,6 +67,20 @@ export default function ComputerTypes() {
     return <Tab label={compType} component={Link} to={compType} />;
   }
 
+  function nullHandler(path) {
+    if (path == null) {
+      return (
+        <div>
+          <TabContent>
+            <Routes>
+              <Route path="overview" element={<AllPc name="overview" />} />
+            </Routes>
+          </TabContent>
+        </div>
+      );
+    }
+  }
+
   return (
     <div>
       <div>
@@ -92,6 +106,7 @@ export default function ComputerTypes() {
           </Tabs>
         </Box>
       </div>
+      <div>{nullHandler(routeMatch)}</div>
       <div>
         {compTypes.map((compType, index) => (
           // Get the value to equal the current route and then get the respective content from the AllPc component page
