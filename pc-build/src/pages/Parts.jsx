@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import FullCard from "../components/content/FullCard";
 import HeaderBanner from "../components/content/HeaderBanner";
+import { Typography } from "@mui/material";
 
 import Background from "../assets/images/4._jbl_quantum_350_wireless-scaled.webp";
 import Mobo from "../assets/images/ASUS_ROG_STRIX_Z490-I_GAMING.png";
@@ -20,6 +21,9 @@ export default function Parts() {
         <HeaderBanner background={Background} title="PC Components" />
       </div>
       <Container>
+        <Typography variant="h2" textAlign="center" mt={3}>
+          Title
+        </Typography>
         <Grid container alignItems="stretch" my={5}>
           <FullCard
             title="Motherboard"

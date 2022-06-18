@@ -6,7 +6,7 @@ export default function SplitScrenRTL(props) {
   return (
     <Container>
       <Grid container mt={5}>
-        <Grid item xs={12} lg={6} sx={{ color: "white" }}>
+        <Grid item xs={12} lg={6}>
           <h1>{props.title}</h1>
           <p>{props.description}</p>
           <Button variant="contained">Learn More</Button>
