@@ -21,7 +21,7 @@ export default function FAQ() {
       panel: "panel3",
     },
   ];
-  const [accordionIsExpanded, setAccordionIsExpanded] = React.useState(true);
+  const [accordionIsExpanded, setAccordionIsExpanded] = React.useState(false);
 
   const accordionExpansionHandler = (panel) => (event, isExpanded) => {
     setAccordionIsExpanded(isExpanded ? panel : false);

@@ -1,5 +1,6 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import {
   Box,
   ClickAwayListener,
@@ -19,6 +20,12 @@ export default function SearchButton() {
     setOpen(false);
   };
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
+
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box
@@ -28,16 +35,14 @@ export default function SearchButton() {
       >
         <Collapse orientation="horizontal" in={open}>
           <div>
-            <TextField
-              id="search"
-              variant="standard"
-              label="Search..."
-              color="info"
-              sx={{
-                input: { color: "white" },
-                borderColor: "white",
-              }}
-            />
+            <ThemeProvider theme={darkTheme}>
+              <TextField
+                id="search"
+                variant="standard"
+                label="Search..."
+                color="info"
+              />
+            </ThemeProvider>
           </div>
         </Collapse>
         <IconButton color="inherit" edge="start" onClick={handleChange}>
