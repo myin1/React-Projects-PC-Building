@@ -82,22 +82,22 @@ export default function Home() {
           <Typography variant="h4" p={5}>
             A Simpler Way of Building Your New PC
           </Typography>
-          <Grid container alignContent="center" spacing={3}>
-            <Grid item sm={12} lg={4}>
+          <Grid container spacing={3}>
+            <Grid item lg={4}>
               <BoltIcon fontSize="large" />
               <Typography variant="h6">Powerful Builds</Typography>
               <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Grid>
-            <Grid item sm={12} lg={4}>
+            <Grid item lg={4}>
               <SpeedIcon fontSize="large" />
               <Typography variant="h6">Fast Service</Typography>
               <Typography>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Grid>
-            <Grid item sm={12} lg={4}>
+            <Grid item lg={4}>
               <ConstructionIcon fontSize="large" />
               <Typography variant="h6">Guaranteed Quality</Typography>
               <Typography>

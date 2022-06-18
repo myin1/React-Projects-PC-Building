@@ -1,5 +1,5 @@
 import { Link, Outlet, useParams } from "react-router-dom";
-import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
+import Workspace from "../assets/images/workspace-g26ebc5eb2_1920.jpg";
 import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
 import * as React from "react";
@@ -21,11 +21,11 @@ export default function ComputerTypes() {
   return (
     <div>
       <HeaderBanner
-        background={Avalanche}
+        background={Workspace}
         title="Build Ideas"
         description="Take a look at our builds"
       />
-      <Tabs value={params.computerType} variant="scrollable">
+      <Tabs value={params.computerType} centered>
         {compTypes.map((compTypes) => (
           <Tab
             value={compTypes}
@@ -37,7 +37,7 @@ export default function ComputerTypes() {
           </Tab>
         ))}
       </Tabs>
-      <div style={{ backgroundColor: "grey", padding: 1 }}>
+      <div style={{ backgroundColor: "lightgrey", padding: 1 }}>
         <Outlet />
       </div>
     </div>

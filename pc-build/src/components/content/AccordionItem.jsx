@@ -1,3 +1,4 @@
+import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -6,12 +7,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AccordionItem(props) {
   return (
-    <Accordion disableGutters="True">
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
-      >
+    <Accordion
+      disableGutters="True"
+      expanded={props.accordionExpanded === props.panel}
+      onChange={props.accordionFunction(props.panel)}
+    >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />} id="panel1a-header">
         <Typography>{props.summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>
