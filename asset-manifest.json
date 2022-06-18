@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Projects-PC-Building/static/css/main.75224591.css",
-    "main.js": "/React-Projects-PC-Building/static/js/main.9d7c1e50.js",
+    "main.js": "/React-Projects-PC-Building/static/js/main.5f33d189.js",
     "static/js/787.ea3fa0ce.chunk.js": "/React-Projects-PC-Building/static/js/787.ea3fa0ce.chunk.js",
     "static/media/Samsung_SSD_840_EVO_1TB.jpg": "/React-Projects-PC-Building/static/media/Samsung_SSD_840_EVO_1TB.b3fe4031516d2ca8addf.jpg",
     "static/media/ASUS_ROG_STRIX_Z490-I_GAMING.png": "/React-Projects-PC-Building/static/media/ASUS_ROG_STRIX_Z490-I_GAMING.68ad09818ea9439a6727.png",
@@ -49,11 +49,11 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/React-Projects-PC-Building/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/React-Projects-PC-Building/index.html",
     "main.75224591.css.map": "/React-Projects-PC-Building/static/css/main.75224591.css.map",
-    "main.9d7c1e50.js.map": "/React-Projects-PC-Building/static/js/main.9d7c1e50.js.map",
+    "main.5f33d189.js.map": "/React-Projects-PC-Building/static/js/main.5f33d189.js.map",
     "787.ea3fa0ce.chunk.js.map": "/React-Projects-PC-Building/static/js/787.ea3fa0ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75224591.css",
-    "static/js/main.9d7c1e50.js"
+    "static/js/main.5f33d189.js"
   ]
 }
