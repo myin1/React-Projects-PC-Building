@@ -29,6 +29,7 @@ function App() {
       <WhiteBar />
       <Navbar />
       <Routes>
+        <Route path="/React-Projects-PC-Building/" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/ComputerTypes" element={<ComputerTypes />}>
           <Route
