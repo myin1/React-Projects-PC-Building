@@ -15,8 +15,6 @@ export default function PromoCard(props) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
         }}
       >
         <img
