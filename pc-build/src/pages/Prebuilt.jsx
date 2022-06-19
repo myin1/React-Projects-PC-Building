@@ -7,7 +7,7 @@ import AccordionItem from "../components/content/AccordionItem";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/system";
 
-import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
+import Desktop from "../assets/images/pexels-xxss-is-back-777001.jpg";
 
 export default function PreBuilt() {
   const components = ["CPU", "Motherboard", "GPU", "RAM", "Storage", "Case"];
@@ -225,7 +225,7 @@ export default function PreBuilt() {
     <div>
       <div>
         <HeaderBanner
-          background={Avalanche}
+          background={Desktop}
           title="Pre-Built PCs"
           description="For 3 heads that need some assistance"
         />
@@ -236,21 +236,21 @@ export default function PreBuilt() {
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Low Tier"
-                image={Avalanche}
+                image={Desktop}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Medium Tier"
-                image={Avalanche}
+                image={Desktop}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Pro Tier"
-                image={Avalanche}
+                image={Desktop}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
@@ -258,22 +258,25 @@ export default function PreBuilt() {
         </Container>
       </div>
       <div>
-        {accordionLists.map((list) => (
-          <AccordionItem
-            summary={list.label}
-            details={
-              <SpanningTable
-                header={components}
-                description1={list.lowTier}
-                description2={list.midTier}
-                description3={list.highTier}
-              />
-            }
-            accordionExpanded={accordionIsExpanded}
-            accordionFunction={accordionExpansionHandler}
-            panel={list.panel}
-          />
-        ))}
+        <Container>
+          <h1 style={{ textAlign: "center" }}>Build Breakdown</h1>
+          {accordionLists.map((list) => (
+            <AccordionItem
+              summary={list.label}
+              details={
+                <SpanningTable
+                  header={components}
+                  description1={list.lowTier}
+                  description2={list.midTier}
+                  description3={list.highTier}
+                />
+              }
+              accordionExpanded={accordionIsExpanded}
+              accordionFunction={accordionExpansionHandler}
+              panel={list.panel}
+            />
+          ))}
+        </Container>
       </div>
     </div>
   );

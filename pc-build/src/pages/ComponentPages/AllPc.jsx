@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import Avalanche from "../../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import SplitScreen from "../../components/content/SplitScreen";
 
-export default function AllPc(handleClick) {
+export default function AllPc() {
   //grab URL parameter to use as title
   let params = useParams();
   return (
