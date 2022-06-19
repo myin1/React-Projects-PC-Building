@@ -1,6 +1,14 @@
 import * as React from "react";
 import Background from "../assets/images/Black_Flat_Screen_Computer_Monitor_on_White_Wooden_Desk.jpg";
-import { Typography, Stack, Container } from "@mui/material";
+import {
+  Typography,
+  Stack,
+  Container,
+  Card,
+  CardHeader,
+  CardContent,
+  CardActions,
+} from "@mui/material";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SplitScreen from "../components/content/SplitScreen";
@@ -12,6 +20,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import SpeedIcon from "@mui/icons-material/Speed";
 import { alpha } from "@mui/material/styles";
+import { components, types } from "../components/Navbar";
 
 // Color Pallete choices: #AFE3C0 (turqiouse green), #3F3F37 (black olive), #EEE5E9 (lavendar)
 // #92DCE5 (middle blue)
@@ -77,7 +86,8 @@ export default function Home() {
           </Grid>
         </Grid>
       </div>
-      <div style={{ backgroundColor: "#bbdefb" }}>
+      <div style={{ backgroundColor: "#E785FF" }}>
+        {/* alt color #bbdefb */}
         <Container sx={{ textAlign: "center", pb: 15 }}>
           <Typography variant="h4" p={5}>
             A Simpler Way of Building Your New PC
@@ -118,7 +128,36 @@ export default function Home() {
                 pellentesque viverra maximus."
         />
       </div>
-      <div style={{ backgroundColor: "lightgray" }}>
+      <div style={{ backgroundColor: "#bbdefb", padding: 1 }}>
+        <Container>
+          <h1 style={{ textAlign: "center" }}>
+            Learn What's Inside your Machine
+          </h1>
+          <Grid container spacing={3}>
+            {components.map((components) => (
+              <Grid item lg={4}>
+                <Card raised="true">
+                  <CardHeader title={components} />
+                  <CardContent>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </CardContent>
+                  <CardActions>
+                    <Button>Learn More</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ display: "flex", mx: "auto", my: 5 }}
+          >
+            View All
+          </Button>
+        </Container>
+      </div>
+      <div style={{ backgroundColor: "lightgray", padding: 1 }}>
         <SplitScrenRTL
           image={Avant}
           title="High Performance"
@@ -128,6 +167,35 @@ export default function Home() {
                 accumsan feugiat. Suspendisse quis nisi neque. Praesent
                 pellentesque viverra maximus."
         />
+      </div>
+      <div>
+        <Container>
+          <h1 style={{ textAlign: "center" }}>
+            Find the Perfect PC for your Needs
+          </h1>
+          <Grid container spacing={3}>
+            {types.map((types) => (
+              <Grid item lg={4}>
+                <Card raised="true">
+                  <CardHeader title={types} />
+                  <CardContent>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </CardContent>
+                  <CardActions>
+                    <Button>Learn More</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{ display: "flex", mx: "auto", my: 5 }}
+          >
+            View All
+          </Button>
+        </Container>
       </div>
     </div>
   );

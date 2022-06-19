@@ -10,7 +10,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const components = [
+export const components = [
   "Motherboard",
   "Power Supply",
   "Storage",
@@ -20,7 +20,7 @@ const components = [
   "Cooling",
   "Case",
 ];
-const types = [
+export const types = [
   "Entertainment",
   "Gaming",
   "Streaming",
