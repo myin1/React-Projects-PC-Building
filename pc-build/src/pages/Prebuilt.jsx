@@ -8,6 +8,9 @@ import Grid from "@mui/material/Grid";
 import { Container } from "@mui/system";
 
 import Desktop from "../assets/images/pexels-xxss-is-back-777001.jpg";
+import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
+import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
+import AVA from "../assets/images/AVADirect-Custom-X99-Intel-Core-i7-gaming-cpu.png";
 
 export default function PreBuilt() {
   const components = ["CPU", "Motherboard", "GPU", "RAM", "Storage", "Case"];
@@ -236,21 +239,21 @@ export default function PreBuilt() {
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Low Tier"
-                image={Desktop}
+                image={Avant}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Medium Tier"
-                image={Desktop}
+                image={AVA}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Pro Tier"
-                image={Desktop}
+                image={Avalanche}
                 body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               />
             </Grid>
