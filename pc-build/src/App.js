@@ -8,6 +8,7 @@ import FAQ from "./pages/FAQ";
 import ComputerTypes from "./pages/ComputerTypes";
 import Parts from "./pages/Parts";
 import AllPc from "./pages/ComponentPages/AllPc";
+import Footer from "./components/Footer";
 
 function WhiteBar() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/Components" element={<Parts />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

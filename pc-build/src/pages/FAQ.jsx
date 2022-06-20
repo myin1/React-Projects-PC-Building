@@ -20,6 +20,26 @@ export default function FAQ() {
       detail: "answer3",
       panel: "panel3",
     },
+    {
+      summary: "question4",
+      detail: "answer4",
+      panel: "panel4",
+    },
+    {
+      summary: "question5",
+      detail: "answer5",
+      panel: "panel5",
+    },
+    {
+      summary: "question6",
+      detail: "answer6",
+      panel: "panel6",
+    },
+    {
+      summary: "question7",
+      detail: "answer7",
+      panel: "panel7",
+    },
   ];
   const [accordionIsExpanded, setAccordionIsExpanded] = React.useState(false);
 
