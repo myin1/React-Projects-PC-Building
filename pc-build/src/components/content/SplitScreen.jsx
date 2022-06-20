@@ -5,7 +5,7 @@ import { Container } from "@mui/system";
 export default function SplitScreen(props) {
   return (
     <Container>
-      <Grid container mt={5}>
+      <Grid container mt={5} spacing={5}>
         <Grid
           item
           xs={12}
