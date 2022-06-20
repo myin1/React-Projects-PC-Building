@@ -9,6 +9,7 @@ import ComputerTypes from "./pages/ComputerTypes";
 import Parts from "./pages/Parts";
 import AllPc from "./pages/ComponentPages/AllPc";
 import ContactUs from "./pages/ContactUs";
+import Service from "./pages/Service";
 
 function WhiteBar() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/React-Projects-PC-Building/" element={<Home />} />
         <Route path="/" element={<Home />} />
+        <Route path="/Service" element={<Service />} />
         <Route path="/ComputerTypes" element={<ComputerTypes />}>
           <Route
             index

@@ -60,6 +60,14 @@ export default function Navbar() {
           <Button
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
+            to="/Service"
+            onMouseEnter={handleClose}
+          >
+            About
+          </Button>
+          <Button
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
             to="/PCBuilds"
             onMouseEnter={handleClose}
           >

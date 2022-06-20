@@ -5,8 +5,8 @@ import { Container } from "@mui/system";
 export default function SplitScrenRTL(props) {
   return (
     <Container>
-      <Grid container mt={5}>
-        <Grid item xs={12} lg={6}>
+      <Grid container mt={5} spacing={5}>
+        <Grid item xs={12} lg={6} paddingRight={1}>
           <h1>{props.title}</h1>
           <p>{props.description}</p>
           <Button variant="contained">Learn More</Button>
