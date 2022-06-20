@@ -14,6 +14,49 @@ import CPU from "../assets/images/AMD_Ryzen_5_2600_(39851733273).jpg";
 import Case from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import Fan from "../assets/images/computers-88000_1280.webp";
 
+export const partList = [
+  {
+    title: "Motherboard",
+    image: Mobo,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "Power Supply",
+    image: PSU,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "Storage",
+    image: Storage,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "CPU",
+    image: CPU,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "GPU",
+    image: GPU,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "RAM",
+    image: RAM,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "Cooling",
+    image: Fan,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "Case",
+    image: Case,
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
+
 export default function Parts() {
   return (
     <div>
@@ -25,46 +68,13 @@ export default function Parts() {
           Title
         </Typography>
         <Grid container alignItems="stretch" my={5}>
-          <FullCard
-            title="Motherboard"
-            img={Mobo}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="Power Supply"
-            img={PSU}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="Storage"
-            img={Storage}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="CPU"
-            img={CPU}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="GPU"
-            img={GPU}
-            body="The power house of the computer."
-          ></FullCard>
-          <FullCard
-            title="RAM"
-            img={RAM}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="Cooling"
-            img={Fan}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
-          <FullCard
-            title="Case"
-            img={Case}
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          ></FullCard>
+          {partList.map((part) => (
+            <FullCard
+              title={part.title}
+              img={part.image}
+              body={part.body}
+            ></FullCard>
+          ))}
         </Grid>
       </Container>
     </div>

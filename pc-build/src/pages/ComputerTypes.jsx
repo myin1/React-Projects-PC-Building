@@ -4,7 +4,7 @@ import HeaderBanner from "../components/content/HeaderBanner";
 import { Tabs, Tab } from "@mui/material";
 import * as React from "react";
 
-const compTypes = [
+export const compTypes = [
   "Entertainment",
   "Gaming",
   "Streaming",

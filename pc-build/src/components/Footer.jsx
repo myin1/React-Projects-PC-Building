@@ -10,8 +10,10 @@ import {
 import { Container } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
+import { compTypes } from "../pages/ComputerTypes";
+import { partList } from "../pages/Parts";
 
-const headerList = ["Company", "About Us", "Builds", "Parts", "PC Type"];
+const headerList = ["Company", "About Us", "PC Types", "Parts", "Builds"];
 const companyList = [
   "company1",
   "company2",
@@ -20,17 +22,9 @@ const companyList = [
   "company5",
 ];
 const aboutList = ["about1", "about2", "about3"];
-const buildsList = [
-  "builds1",
-  "builds2",
-  "builds3",
-  "builds4",
-  "builds5",
-  "builds6",
-  "builds7",
-];
-const partsList = ["parts1", "parts2", "parts3", "parts4"];
-const typesList = ["type1"];
+const typesList = compTypes;
+const partsList = partList;
+const buildsList = ["type1"];
 
 const Item = {
   padding: 3,
@@ -96,7 +90,7 @@ export default function Footer() {
               <Stack sx={{ textAlign: "center" }}>
                 <h3 style={Head}>{headerList[1]}</h3>
                 {aboutList.map((aboutItem) => (
-                  <Link style={Item} to="/">
+                  <Link style={Item} to="/Service">
                     {aboutItem}
                   </Link>
                 ))}
@@ -105,9 +99,9 @@ export default function Footer() {
             <Grid item xs={1}>
               <Stack sx={{ textAlign: "center" }}>
                 <h3 style={Head}>{headerList[2]}</h3>
-                {buildsList.map((buildItem) => (
-                  <Link style={Item} to="/">
-                    {buildItem}
+                {typesList.map((typesItem) => (
+                  <Link style={Item} to={`/ComputerTypes/${typesItem}`}>
+                    {typesItem}
                   </Link>
                 ))}
               </Stack>
@@ -116,8 +110,8 @@ export default function Footer() {
               <Stack sx={{ textAlign: "center" }}>
                 <h3 style={Head}>{headerList[3]}</h3>
                 {partsList.map((partItem) => (
-                  <Link style={Item} to="/">
-                    {partItem}
+                  <Link style={Item} to="/Components">
+                    {partItem.title}
                   </Link>
                 ))}
               </Stack>
@@ -125,9 +119,9 @@ export default function Footer() {
             <Grid item xs={1}>
               <Stack sx={{ textAlign: "center" }}>
                 <h3 style={Head}>{headerList[4]}</h3>
-                {typesList.map((typeItem) => (
-                  <Link style={Item} to="/">
-                    {typeItem}
+                {buildsList.map((buildsItem) => (
+                  <Link style={Item} to="/PCBuilds">
+                    {buildsItem}
                   </Link>
                 ))}
               </Stack>
