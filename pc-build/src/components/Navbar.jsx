@@ -136,7 +136,13 @@ export default function Navbar() {
           </Menu>
         </Box>
         <SearchButton />
-        <Button sx={{ color: "inherit", height: "64px" }}>Contact US</Button>
+        <Button
+          sx={{ color: "inherit", height: "64px" }}
+          component={Link}
+          to={"Contact"}
+        >
+          Contact US
+        </Button>
       </Toolbar>
     </AppBar>
   );
