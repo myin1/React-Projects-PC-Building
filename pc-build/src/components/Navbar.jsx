@@ -60,6 +60,14 @@ export default function Navbar() {
           <Button
             sx={{ color: "inherit", height: "64px" }}
             component={Link}
+            to="/Service"
+            onMouseEnter={handleClose}
+          >
+            About
+          </Button>
+          <Button
+            sx={{ color: "inherit", height: "64px" }}
+            component={Link}
             to="/PCBuilds"
             onMouseEnter={handleClose}
           >
@@ -136,7 +144,13 @@ export default function Navbar() {
           </Menu>
         </Box>
         <SearchButton />
-        <Button sx={{ color: "inherit", height: "64px" }}>Contact US</Button>
+        <Button
+          sx={{ color: "inherit", height: "64px" }}
+          component={Link}
+          to={"Contact"}
+        >
+          Contact US
+        </Button>
       </Toolbar>
     </AppBar>
   );
