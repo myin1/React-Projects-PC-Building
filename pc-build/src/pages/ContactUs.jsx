@@ -66,7 +66,7 @@ export default function Contact() {
         </Grid>
       </Container>
 
-      <Stack textAlign="center">
+      <Stack textAlign="center" paddingTop={3}>
         <Typography>
           <strong>Phone:</strong> 123-456-7890
         </Typography>
