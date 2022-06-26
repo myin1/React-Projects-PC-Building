@@ -22,7 +22,7 @@ export default function PreBuilt() {
       lowTier: [
         "Ryzen 5 5600",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Radeon Rx 6600xt",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
@@ -30,15 +30,15 @@ export default function PreBuilt() {
       midTier: [
         "Ryzen 5 5600",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Radeon Rx 6700xt",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5700x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Nvidia RTX 3070",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
@@ -57,19 +57,19 @@ export default function PreBuilt() {
         "Be Quiet Dark Base 500Dx",
       ],
       midTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5700x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Nvidia RTX 3080",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5900x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvdia RTX 3090",
+        "G.Skill 32GB 3600Mbs",
+        "2TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
     },
@@ -78,27 +78,27 @@ export default function PreBuilt() {
       panel: "panel3",
       header: ["Low Tier", "Mid Tier", "High Tier"],
       lowTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5700x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Nvdia RTX 3060",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       midTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5900x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvdia RTX 3080",
+        "G.Skill 32GB 3600Mbs",
+        "2TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5950x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvdia RTX 3090",
+        "G.Skill 64GB 3600Mbs",
+        "4TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
     },
@@ -115,19 +115,19 @@ export default function PreBuilt() {
         "Be Quiet Dark Base 500Dx",
       ],
       midTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5800x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvdia RTX 3060",
+        "G.Skill 32GB 3600Mbs",
+        "2TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5950x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvidia RTX 3070",
+        "G.Skill 64GB 3600Mbs",
+        "4TB 970 Samsung Evo Pro",
         "Be Quiet Dark Base 500Dx",
       ],
     },
@@ -136,27 +136,27 @@ export default function PreBuilt() {
       panel: "panel5",
       header: ["Low Tier", "Mid Tier", "High Tier"],
       lowTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5700x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
+        "Nvidia RTX 3070",
+        "G.Skill 32GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       midTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5900x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvidia RTX 3080",
+        "G.Skill 64GB 3600Mbs",
+        "1TB 980 Samsung Evo Pro",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5950x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvidia RTX 3090",
+        "G.Skill 128GB 4000Mbs",
+        "4TB 980 Samsung Evo Pro",
         "Be Quiet Dark Base 500Dx",
       ],
     },
@@ -165,9 +165,9 @@ export default function PreBuilt() {
       panel: "panel6",
       header: ["Low Tier", "Mid Tier", "High Tier"],
       lowTier: [
-        "Ryzen 5 5600",
+        "Ryzen 5 5600G",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "N/A",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
@@ -181,9 +181,9 @@ export default function PreBuilt() {
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 7 5700x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
+        "Nvidia RTX 3060",
         "G.Skill 16GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
@@ -196,25 +196,25 @@ export default function PreBuilt() {
       lowTier: [
         "Ryzen 5 5600",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
+        "Nvidia RTX 3070",
+        "G.Skill 32GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       midTier: [
-        "Ryzen 5 5600",
+        "Ryzen 5 5800x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
+        "Nvida RTX 3080",
+        "G.Skill 64GB 3600Mbs",
         "1TB 980 Samsung Evo",
         "Be Quiet Dark Base 500Dx",
       ],
       highTier: [
-        "Ryzen 5 5600",
+        "Ryzen 9 5900x",
         "Aorus X570 Pro Wifi",
-        "Radeon Rx 5700",
-        "G.Skill 16GB 3600Mbs",
-        "1TB 980 Samsung Evo",
+        "Nvidia RTX 3090",
+        "G.Skill 128GB 3600Mbs",
+        "2TB 970 Samsung Evo Pro",
         "Be Quiet Dark Base 500Dx",
       ],
     },
@@ -240,21 +240,21 @@ export default function PreBuilt() {
               <PromoCard
                 title="Low Tier"
                 image={Avant}
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                body="For people just getting into the PC universe."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Medium Tier"
                 image={AVA}
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                body="For those with experience and know what they want to do and what components they need under a budget."
               />
             </Grid>
             <Grid item sm={12} md={6} lg={4}>
               <PromoCard
                 title="Pro Tier"
                 image={Avalanche}
-                body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                body="For the people who want the best pc they can get at the time, the pc enthusiast."
               />
             </Grid>
           </Grid>
