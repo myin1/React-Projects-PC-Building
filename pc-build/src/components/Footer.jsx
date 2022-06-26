@@ -15,20 +15,21 @@ import { partList } from "../pages/Parts";
 
 const headerList = ["Company", "About Us", "PC Types", "Parts", "Builds"];
 const companyList = [
-  "company1",
+  "Homepage",
   "company2",
   "company3",
   "company4",
   "company5",
 ];
-const aboutList = ["about1", "about2", "about3"];
+const aboutList = ["Services", "about2", "about3"];
 const typesList = compTypes;
 const partsList = partList;
-const buildsList = ["type1"];
+const buildsList = ["PC Builds"];
 
 const Item = {
   padding: 3,
   color: "black",
+  fontSize: 12,
   textDecoration: "none",
 };
 
@@ -39,6 +40,7 @@ const Socials = {
 
 const Head = {
   padding: 3,
+  textSize: 15,
   color: "#FFFFFF",
 };
 
@@ -46,7 +48,7 @@ export default function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#E785FF",
+        backgroundColor: "#ACACAC",
         marginTop: 20,
         padding: 5,
       }}
