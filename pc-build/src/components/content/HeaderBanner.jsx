@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
-import { Typography, Stack } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { alpha } from "@mui/material/styles";
 
 export default function HeaderBanner(props) {
   return (
@@ -20,22 +21,24 @@ export default function HeaderBanner(props) {
         style={{ minHeight: "70vh" }}
       >
         <Grid item sm={3}>
-          <Typography variant="h1" color={"white"} textAlign={"center"}>
-            {props.title}
-          </Typography>
-          <Typography
-            variant="h4"
-            color={"white"}
-            textAlign={"center"}
-            sx={{ mb: 2 }}
+          <Box
+            sx={{
+              backgroundColor: (theme) =>
+                alpha(theme.palette.common.white, 0.7),
+              p: 5,
+            }}
           >
-            {props.description}
-          </Typography>
-          <Stack
-            alignItems="center"
-            justifyContent={"center"}
-            direction={"row"}
-          ></Stack>
+            <Typography
+              variant="h1"
+              textAlign={"center"}
+              sx={{ fontWeight: "normal" }}
+            >
+              {props.title}
+            </Typography>
+            <Typography variant="h4" textAlign={"center"} sx={{ mb: 2 }}>
+              {props.description}
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </div>
