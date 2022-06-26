@@ -4,7 +4,7 @@ import FullCard from "../components/content/FullCard";
 import HeaderBanner from "../components/content/HeaderBanner";
 import { Typography } from "@mui/material";
 
-import Background from "../assets/images/4._jbl_quantum_350_wireless-scaled.webp";
+import Background from "../assets/images/niclas-illg-gyRa86ExKTw-unsplash.jpg";
 import Mobo from "../assets/images/ASUS_ROG_STRIX_Z490-I_GAMING.png";
 import RAM from "../assets/images/2014_Corsair_Dominator_Platinum_2x4GB,_1866MHz.jpg";
 import GPU from "../assets/images/5385857910_63f6d85035_b.jpg";

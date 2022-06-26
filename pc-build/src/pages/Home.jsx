@@ -29,7 +29,7 @@ import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 
 function TripleIcon() {
   return (
-    <Container sx={{ textAlign: "center", pb: 15 }}>
+    <Container sx={{ textAlign: "center", pb: 5 }}>
       <Typography variant="h4" p={5}>
         A Simpler Way of Building Your New PC
       </Typography>
@@ -63,7 +63,9 @@ function TripleIcon() {
 function NavCards(props) {
   return (
     <Container>
-      <h1 style={{ textAlign: "center" }}>{props.title}</h1>
+      <Typography variant="h4" py={5} sx={{ textAlign: "center" }}>
+        {props.title}
+      </Typography>
       <Grid container spacing={3}>
         {props.content.map((content) => (
           <Grid item xs={12} lg={4}>
@@ -118,7 +120,11 @@ export default function Home() {
                 p: 5,
               }}
             >
-              <Typography variant="h1" textAlign={"center"}>
+              <Typography
+                variant="h1"
+                textAlign={"center"}
+                sx={{ fontWeight: "normal" }}
+              >
                 Build A PC
               </Typography>
               <Typography variant="h4" textAlign={"center"} sx={{ mb: 2 }}>
@@ -128,12 +134,12 @@ export default function Home() {
                 alignItems="center"
                 justifyContent={"center"}
                 direction={"row"}
+                spacing={4}
               >
                 <Button
                   variant="contained"
                   component={Link}
                   to="PCBuilds"
-                  sx={{ mx: 2 }}
                   size="large"
                 >
                   PC Builds
@@ -142,7 +148,6 @@ export default function Home() {
                   variant="contained"
                   component={Link}
                   to="Components"
-                  sx={{ mx: 2 }}
                   size="large"
                 >
                   Components
@@ -152,7 +157,7 @@ export default function Home() {
           </Grid>
         </Grid>
       </div>
-      <div style={{ backgroundColor: "#E785FF" }}>
+      <div style={{ backgroundColor: "#AFE3C0" }}>
         <TripleIcon />
       </div>
       <div>
@@ -166,13 +171,13 @@ export default function Home() {
                 pellentesque viverra maximus."
         />
       </div>
-      <div style={{ backgroundColor: "#bbdefb", padding: 1 }}>
+      <div style={{ backgroundColor: "#AFE3C0", padding: 1 }}>
         <NavCards
           title="Learn What's Inside your Machine"
           content={components}
         />
       </div>
-      <div style={{ backgroundColor: "lightgray", padding: 1 }}>
+      <div style={{ backgroundColor: "white", padding: 1 }}>
         <SplitScrenRTL
           image={Avant}
           title="High Performance"
@@ -183,7 +188,7 @@ export default function Home() {
                 pellentesque viverra maximus."
         />
       </div>
-      <div>
+      <div style={{ backgroundColor: "#AFE3C0", padding: 1 }}>
         <NavCards title="Find the Perfect PC for your Needs" content={types} />
       </div>
     </div>

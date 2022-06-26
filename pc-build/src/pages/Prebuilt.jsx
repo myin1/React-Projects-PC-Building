@@ -7,7 +7,7 @@ import AccordionItem from "../components/content/AccordionItem";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/system";
 
-import Desktop from "../assets/images/pexels-xxss-is-back-777001.jpg";
+import Desktop from "../assets/images/alienware-Hpaq-kBcYHk-unsplash.jpg";
 import Avalanche from "../assets/images/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png";
 import Avant from "../assets/images/Avant-Tower-Gaming-PC.png";
 import AVA from "../assets/images/AVADirect-Custom-X99-Intel-Core-i7-gaming-cpu.png";
@@ -261,7 +261,7 @@ export default function PreBuilt() {
         </Container>
       </div>
       <div>
-        <Container>
+        <Container maxWidth="xl">
           <h1 style={{ textAlign: "center" }}>Build Breakdown</h1>
           {accordionLists.map((list) => (
             <AccordionItem
