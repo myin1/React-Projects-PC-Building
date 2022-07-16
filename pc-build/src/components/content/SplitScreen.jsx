@@ -20,7 +20,7 @@ export default function SplitScreen(props) {
           }}
         ></Grid>
         <Grid item xs={12} lg={6}>
-          <Typography variant="h4" py={2}>
+          <Typography variant="h4" py={2} sx={{ fontWeight: "bold" }}>
             {props.title}
           </Typography>
           <Typography>{props.description}</Typography>
