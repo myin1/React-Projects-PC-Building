@@ -7,7 +7,14 @@ import {
   Collapse,
   IconButton,
   TextField,
+  Autocomplete,
 } from "@mui/material";
+
+const top100Films = [
+  { label: "The Shawshank Redemption", year: 1994 },
+  { label: "The Godfather", year: 1972 },
+  { label: "The God", year: 1999 },
+];
 
 export default function SearchButton() {
   const [open, setOpen] = React.useState(false);
@@ -36,11 +43,19 @@ export default function SearchButton() {
         <Collapse orientation="horizontal" in={open}>
           <div>
             <ThemeProvider theme={darkTheme}>
-              <TextField
-                id="search"
-                variant="standard"
-                label="Search..."
-                color="info"
+              <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 200 }}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    id="search"
+                    variant="standard"
+                    label="Search..."
+                    color="info"
+                  />
+                )}
               />
             </ThemeProvider>
           </div>
