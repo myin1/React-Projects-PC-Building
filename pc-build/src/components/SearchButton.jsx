@@ -1,6 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   ClickAwayListener,
@@ -10,14 +11,10 @@ import {
   Autocomplete,
 } from "@mui/material";
 
-const top100Films = [
-  { label: "The Shawshank Redemption", year: 1994 },
-  { label: "The Godfather", year: 1972 },
-  { label: "The God", year: 1999 },
-];
-
-export default function SearchButton() {
+export default function SearchButton(props) {
   const [open, setOpen] = React.useState(false);
+
+  let navigate = useNavigate();
 
   const handleChange = () => {
     setOpen((prev) => !prev);
@@ -33,6 +30,18 @@ export default function SearchButton() {
     },
   });
 
+  const pages = [
+    { label: "", path: "/" },
+    { label: "About", path: "/Service" },
+  ];
+
+  const [inputValue, setInputValue] = React.useState(pages[0]);
+
+  const inputValueHandler = (event, value) => {
+    setInputValue(value);
+    navigate(inputValue.path);
+  };
+
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box
@@ -45,8 +54,10 @@ export default function SearchButton() {
             <ThemeProvider theme={darkTheme}>
               <Autocomplete
                 disablePortal
-                options={top100Films}
+                value={inputValue}
+                options={pages}
                 sx={{ width: 200 }}
+                onChange={inputValueHandler}
                 renderInput={(params) => (
                   <TextField
                     {...params}
